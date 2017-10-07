@@ -17,10 +17,6 @@ public final class TorrentHash {
         return new TorrentHash(torrentHash);
     }
 
-    public static TorrentHash valueOf(Object torrentHash) {
-        return valueOf(torrentHash.toString());
-    }
-
     @Override
     public String toString() {
         return hash;
