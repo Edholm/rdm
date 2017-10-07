@@ -12,9 +12,13 @@ public class Application {
         final TorrentMatcher matcher = new TorrentMatcher(allTorrents);
         for (String arg : args) {
             if (!matcher.isTorrentDir(arg)) {
-                System.out.println(arg);
+                System.out.println(escapeWhitespace(arg));
             }
         }
+    }
+
+    private static String escapeWhitespace(String path) {
+        return path.replace(" ", "\\ ");
     }
 
     private static class TorrentMatcher {
