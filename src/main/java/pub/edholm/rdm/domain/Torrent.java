@@ -43,9 +43,9 @@ public final class Torrent {
         if (o == null || getClass() != o.getClass()) return false;
         Torrent torrent = (Torrent) o;
         return Objects.equals(hash, torrent.hash) &&
-                Objects.equals(name, torrent.name) &&
-                Objects.equals(fullPath, torrent.fullPath) &&
-                Objects.equals(label, torrent.label);
+            Objects.equals(name, torrent.name) &&
+            Objects.equals(fullPath, torrent.fullPath) &&
+            Objects.equals(label, torrent.label);
     }
 
     @Override
@@ -56,10 +56,10 @@ public final class Torrent {
     @Override
     public String toString() {
         return "Torrent{" +
-                "hash=" + hash +
-                ", name='" + name + '\'' +
-                ", fullPath=" + fullPath +
-                ", label='" + label + '\'' +
-                '}';
+            "hash=" + hash +
+            ", name='" + name + '\'' +
+            ", fullPath=" + fullPath +
+            ", label='" + label + '\'' +
+            '}';
     }
 }

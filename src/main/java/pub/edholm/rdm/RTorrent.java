@@ -11,7 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class RTorrent {
+class RTorrent {
     private static final String RPC_URL = "http://localhost/RPC2";
     private final XMLRPCClient rpcClient;
 
@@ -23,7 +23,7 @@ public class RTorrent {
         }
     }
 
-    public List<Torrent> getAllTorrents() {
+    List<Torrent> getAllTorrents() {
         final List<String> methods = List.of("", "default", "d.hash=", "d.name=", "d.directory=", "d.custom1=");
         try {
             final Object[] results = (Object[]) rpcClient.call("d.multicall2", methods.toArray());
